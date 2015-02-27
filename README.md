@@ -10,3 +10,9 @@ Based on [node.js](http://nodejs.org/) (JS) for running the logic server  and [o
 
 ##Sketch
 ![Living wall sketch](https://docs.google.com/drawings/d/1_eEHorY4SHgjoSHv4VXFLf0C0VXq4MCWn5ROC49W-Ew/pub?w=600)
+
+##Modules
+![segment display 4x7](http://www.tinkerforge.com/de/doc/_images/Bricklets/bricklet_segment_display_4x7_tilted_350.jpg)
+![led strip](https://www.tinkerforge.com/de/shop/media/catalog/product/cache/2/image/200x200/9df78eab33525d08d6e5fb8d27136e95/b/r/bricklet_led_strip_tilted_600.jpg)
+![linear poti](https://www.tinkerforge.com/de/shop/media/catalog/product/cache/2/image/200x200/9df78eab33525d08d6e5fb8d27136e95/b/r/bricklet_linear_poti_tilted_600.jpg)
+![led pixels](http://i00.i.aliimg.com/wsphoto/v16/1022672558_1/AAA-12mm-WS2811-led-pixel-module-IP68-waterproof-DC5V-full-color-RGB-50pcs-a-string-christmas.jpg)
