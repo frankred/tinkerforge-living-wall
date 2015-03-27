@@ -38,9 +38,6 @@ TinkerforgeSegmentDisplayClock = function (uid, ipcon, brightness) {
     this.segments = [0x00, 0x00, 0x00, 0x00];
     this.show_colon = true;
 
-    this.disable_colon_tick = false;
-    this.disable_brightness = false;
-
     this.defaults = {
         fading: {
             duration: 800,
@@ -71,10 +68,6 @@ TinkerforgeSegmentDisplayClock.prototype.start = function () {
 
 
 TinkerforgeSegmentDisplayClock.prototype.toggleColon = function () {
-    if (this.disable_colon_tick) {
-        return;
-    }
-
     this.show_colon = !this.show_colon;
 };
 
