@@ -29,9 +29,8 @@ TinkerforgeSegmentDisplayClock = function (uid, ipcon, brightness) {
     this.tweenable = new Tweenable();
 
     this.debug_tick = debug('tick');
-    this.debug_fade = debug('fade');
     this.debug_convert = debug('convert');
-    this.debug_update = debug('draw');
+    this.debug_draw = debug('draw');
 
     this.disabled = false;
     this.brightness = brightness;
@@ -140,6 +139,6 @@ TinkerforgeSegmentDisplayClock.prototype.toNumberArray = function (time) {
 };
 
 TinkerforgeSegmentDisplayClock.prototype.draw = function () {
-    this.debug_update(JSON.stringify(this.segments) + " " + this.brightness + " " + this.show_colon);
+    this.debug_draw(JSON.stringify(this.segments) + " " + this.brightness + " " + this.show_colon);
     this.bricklet.setSegments(this.disabled ? [0x00, 0x00, 0x00, 0x00] : this.segments, this.brightness, this.show_colon);
 };
