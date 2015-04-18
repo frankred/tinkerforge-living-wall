@@ -76,7 +76,7 @@ TinkerforgeSegmentDisplayClock.prototype.fading = function (duration, amount) {
     amount = amount ? amount : this.defaults.fading.amount;
     duration = duration ? duration : this.defaults.fading.duration;
 
-    var infinity = amount < 0 ? true : false;
+    var infinity = amount < 0;
 
     var lastStepValue = 0;
     var step = function (data) {
