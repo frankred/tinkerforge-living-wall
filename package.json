@@ -1,0 +1,34 @@
+{
+  "name": "tinkerforge-living-wall",
+  "version": "0.0.0",
+  "description": "My private tinkerforge project living wall with 480 rgb pixel, 2x master bricks, 2x led strip bricklet, 1x segment display 4x7 bricklet, 1x linear poti bricket.",
+  "main": "index.js",
+  "dependencies": {
+    "moment": "*",
+    "tinkerforge": "*",
+    "debug": "*",
+    "shifty" : "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "assert": "*"
+  },
+  "scripts": {
+    "test": "mocha tests/all.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frankred/tinkerforge-living-wall.git"
+  },
+  "keywords": [
+    "tinkerforge",
+    "living-wall",
+    "led",
+    "wall"
+  ],
+  "author": "Frank Roth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frankred/tinkerforge-living-wall/issues"
+  }
+}
