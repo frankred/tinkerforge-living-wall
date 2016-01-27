@@ -3,8 +3,6 @@ var moment = require('moment');
 var debug = require('debug');
 var Tweenable = require('shifty');
 
-debug.enable('*');
-
 var DIGITS = [
     0x3f,   // 0
     0x06,   // 1
@@ -20,7 +18,7 @@ var DIGITS = [
 
 var ONE_SECOND = 1000;
 
-TinkerforgeSegmentDisplayClock = function (uid, ipcon, brightness) {
+TinkerforgeSegmentDisplayClock = function (ipcon, uid, brightness) {
     this.ipcon = ipcon;
     this.uid = uid;
     this.digits = DIGITS;
@@ -28,9 +26,9 @@ TinkerforgeSegmentDisplayClock = function (uid, ipcon, brightness) {
     this.bricklet = new Tinkerforge.BrickletSegmentDisplay4x7(uid, ipcon);
     this.tweenable = new Tweenable();
 
-    this.debug_tick = debug('tick');
-    this.debug_convert = debug('convert');
-    this.debug_draw = debug('draw');
+    this.debug_tick = debug('4x7-segment-display:tick');
+    this.debug_convert = debug('4x7-segment-display:convert');
+    this.debug_draw = debug('4x7-segment-display:draw');
 
     this.disabled = false;
     this.brightness = brightness;
@@ -142,3 +140,6 @@ TinkerforgeSegmentDisplayClock.prototype.draw = function () {
     this.debug_draw(JSON.stringify(this.segments) + " " + this.brightness + " " + this.show_colon);
     this.bricklet.setSegments(this.disabled ? [0x00, 0x00, 0x00, 0x00] : this.segments, this.brightness, this.show_colon);
 };
+
+
+module.exports = TinkerforgeSegmentDisplayClock;
