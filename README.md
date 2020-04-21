@@ -10,7 +10,6 @@ My private tinkerforge project living wall with 480 rgb pixel, 2x master bricks,
 Everything in total costs currently about 158,60€
 
 ## Modules
-![master brick]
 <img src="https://www.tinkerforge.com/de/shop/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/b/r/brick_master21_tilted_front_800.jpg" width="148">
 
 <img src="https://www.tinkerforge.com/de/doc/_images/Bricklets/bricklet_led_strip_tilted_800.jpg =100" width="148">
