@@ -67,7 +67,6 @@ TinkerforgeLEDWallMatrix.prototype.calcIndex = function (x, y, height) {
 
 
 TinkerforgeLEDWallMatrix.prototype.setRectangle = function (x, y, width, height, r, g, b) {
-
     this.debug("register: ", this.register);
 
     for (var i = 0; i < width; i++) {

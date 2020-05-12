@@ -13,7 +13,7 @@ Everything in total costs currently about 158,60€
 ### Power Supply Adapter
 Mean Well RSP-200-5 AC/DC-Netzteilbaustein, geschlossen 40 A 200 W 5 V/DC
 
-<img src="mean-well-rsp-200-5-ac-dc-netzteilbaustein-geschlossen-40-a-200-w-5-v-dc.jpg" width="148">
+<img src="img/mean-well-rsp-200-5-ac-dc-netzteilbaustein-geschlossen-40-a-200-w-5-v-dc.jpg" width="148">
 
 ### Tinkerforge Master Brick 2.1:
 https://www.tinkerforge.com/en/shop/bricks/master-brick.html

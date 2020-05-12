@@ -7,9 +7,8 @@
     "moment": "*",
     "tinkerforge": "*",
     "debug": "*",
-    "shifty" : "*",
+    "shifty": "*",
     "ksort": "*"
-
   },
   "devDependencies": {
     "mocha": "*",
