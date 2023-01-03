@@ -99,6 +99,7 @@ TinkerforgeLEDWall.prototype.set = function (x, y, r, g, b) {
 TinkerforgeLEDWall.prototype.setRectangle = function (x, y, width, height, r, g, b) {
     this.debug('matrix.setRectangle(' + x + ',' + y + ',' + width + ',' + height + ',' + r + ',' + g + ',' + b + ');');
     this.matrix.setRectangle(x, y, width, height, r, g, b);
+    this.matrix.draw()
 };
 
 TinkerforgeLEDWall.prototype.draw = function () {

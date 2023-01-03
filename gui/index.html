@@ -1,0 +1,356 @@
+<html>
+<head>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(21, 1fr);
+            grid-template-rows: repeat(17, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            width: 640px;
+            margin: 20px;
+            height: 520px;
+        }
+
+        .pixel {
+            border: 1px solid lightgray;
+            height: 10px;
+            width: 10px;
+            border-radius: 5px;
+        }
+
+        .pixel:hover {
+            cursor: pointer;
+        }
+
+        .colors button {
+            margin-top: 20px;
+            display: inline-block;
+            border: 1px solid #00000026;
+            border-radius: 0;
+            outline: none;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            margin-bottom: 5px
+        }
+
+        .colors button:nth-of-type(1) {
+            background-color: #0000ff;
+        }
+
+        .colors button:nth-of-type(2) {
+            background-color: #009fff;
+        }
+
+        .colors button:nth-of-type(3) {
+            background-color: #0fffff;
+        }
+
+        .colors button:nth-of-type(4) {
+            background-color: #bfffff;
+        }
+
+        .colors button:nth-of-type(5) {
+            background-color: #000000;
+        }
+
+        .colors button:nth-of-type(6) {
+            background-color: #333333;
+        }
+
+        .colors button:nth-of-type(7) {
+            background-color: #666666;
+        }
+
+        .colors button:nth-of-type(8) {
+            background-color: #999999;
+        }
+
+        .colors button:nth-of-type(9) {
+            background-color: #ffcc66;
+        }
+
+        .colors button:nth-of-type(10) {
+            background-color: #ffcc00;
+        }
+
+        .colors button:nth-of-type(11) {
+            background-color: #ffff00;
+        }
+
+        .colors button:nth-of-type(12) {
+            background-color: #ffff99;
+        }
+
+        .colors button:nth-of-type(13) {
+            background-color: #003300;
+        }
+
+        .colors button:nth-of-type(14) {
+            background-color: #555000;
+        }
+
+        .colors button:nth-of-type(15) {
+            background-color: #00ff00;
+        }
+
+        .colors button:nth-of-type(16) {
+            background-color: #99ff99;
+        }
+
+        .colors button:nth-of-type(17) {
+            background-color: #f00000;
+        }
+
+        .colors button:nth-of-type(18) {
+            background-color: #ff6600;
+        }
+
+        .colors button:nth-of-type(19) {
+            background-color: #ff9933;
+        }
+
+        .colors button:nth-of-type(20) {
+            background-color: #f5deb3;
+        }
+
+        .colors button:nth-of-type(21) {
+            background-color: #330000;
+        }
+
+        .colors button:nth-of-type(22) {
+            background-color: #663300;
+        }
+
+        .colors button:nth-of-type(23) {
+            background-color: #cc6600;
+        }
+
+        .colors button:nth-of-type(24) {
+            background-color: #deb887;
+        }
+
+        .colors button:nth-of-type(25) {
+            background-color: #aa0fff;
+        }
+
+        .colors button:nth-of-type(26) {
+            background-color: #cc66cc;
+        }
+
+        .colors button:nth-of-type(27) {
+            background-color: #ff66ff;
+        }
+
+        .colors button:nth-of-type(28) {
+            background-color: #ff99ff;
+        }
+
+        .colors button:nth-of-type(29) {
+            background-color: #e8c4e8;
+        }
+
+        .colors button:nth-of-type(30) {
+            background-color: #ffffff;
+        }
+
+        .currentColorCircle {
+            position:absolute;
+            top: 1px;
+            left: 400px;
+            margin-top: 5px;
+            height: 25px;
+            width: 25px;
+            border-radius: 13px;
+            border: 1px solid black
+        }
+
+        .image {
+            width: 640px;
+            height: auto;
+            image-rendering: pixelated;
+            border: 1px solid lightgray;
+        }
+
+    </style>
+
+</head>
+<body>
+    r,g,b: <input class="currentColor" type="text" value=""/> e.g.: 255, 12, 55 &nbsp;&nbsp;&nbsp;    <button class="clear">Clear</button>
+
+    <div class="currentColorCircle"></div>
+    <div class="colors">
+        <button type="button" value="#0000ff"></button>
+        <button type="button" value="#009fff"></button>
+        <button type="button" value="#0fffff"></button>
+        <button type="button" value="#bfffff"></button>
+        <button type="button" value="#000000"></button>
+        <button type="button" value="#333333"></button>
+        <button type="button" value="#666666"></button>
+        <button type="button" value="#999999"></button>
+        <button type="button" value="#ffcc66"></button>
+        <button type="button" value="#ffcc00"></button>
+        <button type="button" value="#ffff00"></button>
+        <button type="button" value="#ffff99"></button>
+        <button type="button" value="#003300"></button>
+        <button type="button" value="#555000"></button>
+        <button type="button" value="#00ff00"></button>
+        <button type="button" value="#99ff99"></button>
+        <button type="button" value="#f00000"></button>
+        <button type="button" value="#ff6600"></button>
+        <button type="button" value="#ff9933"></button>
+        <button type="button" value="#f5deb3"></button>
+        <button type="button" value="#330000"></button>
+        <button type="button" value="#663300"></button>
+        <button type="button" value="#cc6600"></button>
+        <button type="button" value="#deb887"></button>
+        <button type="button" value="#aa0fff"></button>
+        <button type="button" value="#cc66cc"></button>
+        <button type="button" value="#ff66ff"></button>
+        <button type="button" value="#ff99ff"></button>
+        <button type="button" value="#e8c4e8"></button>
+        <button type="button" value="#ffffff"></button>
+    </div>
+
+    <div style="display: flex">
+        <div class="grid"></div>
+        <div>
+            <img class="image" src=""/>
+        </div>
+    </div>
+
+    <script>
+      const width = 21;
+      const height = 17;
+
+      initCurrentColor();
+      initGrid();
+      initColorButtons();
+      initClearButton();
+
+      function initClearButton() {
+        document.querySelector('.clear').addEventListener('click', clear)
+      }
+
+
+      function initGrid(){
+        const grid = document.querySelector('.grid');
+        for(let i = 0; i < width; i++){
+          for(let j = 0; j < height; j++){
+            const div = document.createElement('div');
+            div.classList.add('pixel')
+            div.onclick = pixelClicked;
+            grid.appendChild(div)
+          }
+        }
+        clear()
+        grid.addEventListener('drag', gridDragover)
+      }
+
+      function gridDragover(event){
+        console.log(event.currentTarget)
+      }
+
+      function pixelClicked(event){
+        event.currentTarget.style.backgroundColor = window.color;
+        event.currentTarget.setAttribute('data-color', window.color)
+      }
+
+      function hexToRgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+          r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
+          b: parseInt(result[3], 16)
+        } : null;
+      }
+
+      function clear(){
+        document.querySelectorAll('.pixel').forEach((elementNode) => {
+          console.log(elementNode)
+          elementNode.setAttribute('data-color', '#000000')
+          elementNode.style.backgroundColor = 'rgb(255,255,255)';
+        })
+      }
+
+      function setCurrentColor(event) {
+          window.color = event.currentTarget.getAttribute('value')
+          const rgb = hexToRgb(window.color)
+          document.querySelector('.currentColor').value = rgb.r + ',' + rgb.g + ',' + rgb.b;
+          event.preventDefault();
+      }
+
+      function initColorButtons(){
+        var colorButtons = document.querySelectorAll('button[value]');
+        Array.from(colorButtons).forEach(colorButton => {
+          colorButton.addEventListener('click', setCurrentColor);
+        });
+      }
+
+      function initCurrentColor() {
+        document.querySelector('.currentColor').setAttribute('value', '255,204,102')
+        window.color =  'rgb(' + document.querySelector('.currentColor').getAttribute('value') + ')'
+      }
+
+      document.onpaste = function(event){
+        var items = (event.clipboardData || event.originalEvent.clipboardData).items;
+        console.log(JSON.stringify(items)); // will give you the mime types
+        for (index in items) {
+          var item = items[index];
+          if (item.kind === 'file') {
+            var blob = item.getAsFile();
+            var reader = new FileReader();
+            reader.onload = function(event){
+                console.log(event.target.result)
+              document.querySelector('.image').src = event.target.result;
+            };
+            reader.readAsDataURL(blob)
+          }
+        } //
+      }
+
+      const image = document.querySelector('.image');
+      image.onload = function() {
+        var canvas = document.createElement('canvas');
+        canvas.width = image.width;
+        canvas.height = image.height;
+
+        var context = canvas.getContext('2d');
+        context.drawImage(image, 0, 0);
+
+        var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+
+        // Now you can access pixel data from imageData.data.
+        // It's a one-dimensional array of RGBA values.
+        // Here's an example of how to get a pixel's color at (x,y)
+        const getCanvasPixel = (x,y) => {
+          var index = (y*imageData.width + x) * 4;
+          var red = imageData.data[index];
+          var green = imageData.data[index + 1];
+          var blue = imageData.data[index + 2];
+          return [red, green, blue]
+        }
+
+        const pixels = document.querySelectorAll('.pixel')
+
+        const setPixelColor = (x,y, color) => {
+          const pixel = pixels[y * width + x];
+          pixel.style.backgroundColor = color;
+          pixel.setAttribute('data-color', color)
+        }
+
+        for(let i = 0; i < width; i++){
+          for(let j = 0; j < height; j++){
+            const rgbArr = getCanvasPixel(i,j)
+            setPixelColor(i,j, 'rgb(' + rgbArr[0] + ',' + rgbArr[1] + ',' +  rgbArr[2] + ')')
+          }
+        }
+
+
+
+
+      };
+    </script>
+</body>
+</html>

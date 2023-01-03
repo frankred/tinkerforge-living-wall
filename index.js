@@ -19,21 +19,22 @@ var start_ledWall = function (connectReason) {
     var walls = [
         {
             uid: 'oV9',
-            leds: 267
+            leds: 217
         },
         {
             uid: 'oWs',
-            leds: 226
+            leds: 157
         }
     ];
 
-    WALL = new TinkerforgeLEDWall(ipcon, walls, 29, 17);
-    // WALL.setRectangle(5, 5, 4, 4, 255, 0, 255);
+    WALL = new TinkerforgeLEDWall(ipcon, walls, 22, 17);
+
+
+    WALL.setRectangle(0, 0, 22, 9, 25, 0, 25);
     // WALL.animationArmageddon(28,84,35, 16, true);
-    WALL.setRectangle(16, 2, 2, 2, 255, 0, 255);
+    // WALL.setRectangle(6, 2, 2, 2, 255, 0, 255);
     // WALL.animationDigitalWatch(100,100,200);
     // WALL.setAll(3,3, 30);
-
 
 
 
